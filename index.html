@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="images/logo.jpg">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="Search News">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card-container container flex" id="cards-container">
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 id="news-source" class="news-source">End Gdget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum libero dignissimos cum odit repudiandae dolor, voluptatem quae quaerat aperiam dolorum fuga dicta. Quo tempora explicabo eos nostrum officiis distinctio.</p>
+            </div>
+        </div>
+    </template>
+
+    <div class="pagination container flex">
+        <button id="prev-page" onclick="onPrevPage()">Prev</button>
+        <span id="page-numbers"></span>
+        <button id="next-page" onclick="onNextPage()">Next</button>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
