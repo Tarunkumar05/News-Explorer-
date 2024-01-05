@@ -170,7 +170,7 @@ main {
     pointer-events: none;
 }
 
-/* Add a media query for screens smaller than 768px */
+/* media query for screens smaller than 768px */
 @media (max-width: 768px) {
     .main-nav {
         flex-direction: column;
